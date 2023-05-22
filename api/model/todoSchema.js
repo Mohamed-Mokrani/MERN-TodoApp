@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const TodoSchema = new Schema({
-  todo: {
+  text: {
     type: String,
     required: true,
   },
@@ -10,8 +10,8 @@ const TodoSchema = new Schema({
     type: Boolean,
     default: false,
   },
-  time: {
-    typre: String,
+  timestamp: {
+    type: String,
     default: Date.now(),
   },
 });

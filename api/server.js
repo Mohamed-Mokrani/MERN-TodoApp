@@ -12,6 +12,11 @@ connectDB();
 
 const Todo = require("./model/todoSchema");
 
+app.get("todos", async (req, res) => {
+  const todos = await Todo.find();
+  res.json(todos);
+});
+
 app.listen(process.env.PORT, (err) => {
   err
     ? console.log(err)
