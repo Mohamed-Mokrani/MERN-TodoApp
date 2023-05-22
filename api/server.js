@@ -12,13 +12,23 @@ connectDB();
 
 const Todo = require("./model/todoSchema");
 
-app.get("todos", async (req, res) => {
+// GET REQUEST
+app.get("/todos", async (req, res) => {
   const todos = await Todo.find();
   res.json(todos);
 });
 
-app.listen(process.env.PORT, (err) => {
-  err
-    ? console.log(err)
-    : console.log(`Server is running on http://localhost:${process.env.PORT}`);
+// POST REQUEST
+app.post("/todo/new", async (req, res) => {
+  const todo = new Todo({
+    text: req.body.text,
+  });
+  todo.save();
+  res.json(todo);
 });
+
+
+
+app.listen(process.env.PORT, () =>
+  console.log(`Server is running on http://localhost:${process.env.PORT}`)
+);

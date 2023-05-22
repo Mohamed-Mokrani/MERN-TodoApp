@@ -1,0 +1,12 @@
+
+
+GET http://localhost:5000/todos
+
+###
+
+POST http://localhost:5000/todo/new
+Content-Type: application/json
+{
+    "text":"toto"
+}
+
