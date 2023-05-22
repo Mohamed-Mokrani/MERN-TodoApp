@@ -10,8 +10,10 @@ require("dotenv").config();
 
 connectDB();
 
+const Todo = require("./model/todoSchema");
+
 app.listen(process.env.PORT, (err) => {
-  err ? console.log(err) : console.log(`Server is running on http://localhost:${process.env.PORT}`);
+  err
+    ? console.log(err)
+    : console.log(`Server is running on http://localhost:${process.env.PORT}`);
 });
-
-
