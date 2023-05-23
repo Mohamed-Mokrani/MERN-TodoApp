@@ -1,12 +1,19 @@
 
-
+###
 GET http://localhost:5000/todos
 
 ###
-
 POST http://localhost:5000/todo/new
 Content-Type: application/json
+
 {
-    "text":"toto"
+    "text":"sport"
 }
+
+###
+DELETE  http://localhost:5000/todo/delete/646d0bf797d8543263ab032d
+
+###
+PUT     http://localhost:5000/todo/complete/646d0c7e5f3941fe8be83150
+
 
