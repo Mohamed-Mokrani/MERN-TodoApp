@@ -36,12 +36,12 @@ app.delete("/todo/delete/:id", async (req, res) => {
 // UPDATE REQUEST
 app.put("/todo/complete/:id", async (req, res) => {
   const todo = await Todo.findById(req.params.id);
-
   todo.complete = !todo.complete;
   todo.save();
   res.json(todo);
 });
 
+// SERVER 
 app.listen(process.env.PORT, () =>
   console.log(`Server is running on http://localhost:${process.env.PORT}`)
 );
