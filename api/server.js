@@ -41,7 +41,8 @@ app.put("/todo/complete/:id", async (req, res) => {
   res.json(todo);
 });
 
-// SERVER 
+
+// SERVER
 app.listen(process.env.PORT, () =>
   console.log(`Server is running on http://localhost:${process.env.PORT}`)
 );

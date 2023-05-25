@@ -1,18 +1,18 @@
 
 ###
-GET http://localhost:5000/todos
+GET http://localhost:3001/todos
 
 ###
-POST http://localhost:5000/todo/new
+POST http://localhost:3001/todo/new
 Content-Type: application/json
 
 {
-    "text":"sport"
+    "text":"study"
 }
 ###
-DELETE  http://localhost:5000/todo/delete/646d0c7e5f3941fe8be83150
+DELETE  http://localhost:3001/todo/delete/646fb407ff63405c09de5f72
 
 ###
-PUT     http://localhost:5000/todo/complete/646d3426b9b4a577e186a4d5
+PUT     http://localhost:3001/todo/complete/646d3426b9b4a577e186a4d5
 
 
